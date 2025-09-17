@@ -95,3 +95,36 @@ option = st.selectbox(
 
 st.write('Your favorite color is', option)
 
+
+#day11 複数選択ウィジェットの作成
+st.header('st.multiselect')
+
+options = st.multiselect(
+    'What are your favorite colors',
+    ['Green', 'Yellow', 'Red', 'Blue'], #選択肢
+    ['Yellow', 'Red']) #初期値(複数選択可)
+
+
+st.write('You selected:', options)
+
+#day12 チェックボックスウィジェット
+st.header('st.checkbox')
+
+st.write('What would you like to order?')
+
+icecream =  st.checkbox('Ice cream') #チェックボックス
+coffee = st.checkbox('Coffee')
+cola = st.checkbox('Cola')
+
+# チェックされたものだけ表示:↑のチェックボックスでチェック可否判定を行うオブジェクトを作成。チェックされたものがTrueになり下記の文章が表示される。
+if icecream:
+    st.write("Great! Here's some more ??")
+
+if coffee:
+    st.write("Okay, here's some coffee ?")
+
+if cola:
+    st.write("Here you go ??")
+
+#streamlit run 2025091630days_streamlit.py で実行
+
